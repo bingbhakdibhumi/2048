@@ -2,13 +2,18 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
+  background: 0;
+  color: #f9f9f9;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
 body {
-  margin: 80px 0; }
+  margin: 60px 0;
+  background-image: linear-gradient(rgba(250, 248, 239, 0.19), rgba(250, 248, 239, 0.19)), url("https://i.imgur.com/4v8Xrvo.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 .heading:after {
   content: "";
@@ -16,11 +21,13 @@ body {
   clear: both; }
 
 h1.title {
-  font-size: 80px;
-  font-weight: bold;
+  font-family: "Bowlby One SC", "Clear Sans", sans-serif;
+  font-size: 52px;
+  font-weight: normal;
   margin: 0;
   display: block;
-  float: left; }
+  float: left;
+  text-transform: uppercase; }
 
 @-webkit-keyframes move-up {
   0% {
@@ -324,31 +331,39 @@ hr {
   .tile .tile-inner {
     border-radius: 3px;
     background: #eee4da;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     text-align: center;
     font-weight: bold;
     z-index: 10;
-    font-size: 55px; }
+    font-size: 55px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 5px;
+    box-sizing: border-box; }
   .tile.tile-2 .tile-inner {
-    background: #eee4da;
+    background-color: #eee4da;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-4 .tile-inner {
-    background: #ede0c8;
+    background-color: #ede0c8;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-8 .tile-inner {
     color: #f9f6f2;
-    background: #f2b179; }
+    background-color: #f2b179; }
   .tile.tile-16 .tile-inner {
     color: #f9f6f2;
-    background: #f59563; }
+    background-color: #f59563; }
   .tile.tile-32 .tile-inner {
     color: #f9f6f2;
-    background: #f67c5f; }
+    background-color: #f67c5f; }
   .tile.tile-64 .tile-inner {
     color: #f9f6f2;
-    background: #f65e3b; }
+    background-color: #f65e3b; }
   .tile.tile-128 .tile-inner {
     color: #f9f6f2;
-    background: #edcf72;
+    background-color: #edcf72;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
@@ -356,7 +371,7 @@ hr {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
     color: #f9f6f2;
-    background: #edcc61;
+    background-color: #edcc61;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
@@ -364,7 +379,7 @@ hr {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
     color: #f9f6f2;
-    background: #edc850;
+    background-color: #edc850;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
@@ -372,7 +387,7 @@ hr {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
     color: #f9f6f2;
-    background: #edc53f;
+    background-color: #edc53f;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
@@ -380,7 +395,7 @@ hr {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
     color: #f9f6f2;
-    background: #edc22e;
+    background-color: #edc22e;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
@@ -388,11 +403,19 @@ hr {
         font-size: 15px; } }
   .tile.tile-super .tile-inner {
     color: #f9f6f2;
-    background: #3c3a32;
+    background-color: #3c3a32;
     font-size: 30px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
         font-size: 10px; } }
+
+.tile-label {
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  padding: 5px 6px; }
 
 @-webkit-keyframes appear {
   0% {
@@ -538,7 +561,7 @@ hr {
     font-size: 15px; }
 
   body {
-    margin: 20px 0;
+    margin: 0;
     padding: 0 20px; }
 
   h1.title {
